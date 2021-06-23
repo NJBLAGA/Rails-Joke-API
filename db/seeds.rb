@@ -13,3 +13,12 @@ if Category.all.length == 0
         puts "Created #{category} category"
     end
 end
+
+
+    Joke.create(category_id: 1, body: "A good steak pun is a rare medium done well")
+    Joke.create(category_id: 1, body: "I was wondering why the ball was getting bigger. Then it hit me") 
+    Joke.create(category_id: 1, body: "What’s the difference between a hippo and a zippo? One is really heavy and the other is a little lighter")
+    Joke.create(category_id: 1, body: "I tried to sue the airline for losing my luggage. I lost my case")
+    Joke.create(category_id: 2, body: "In order to understand recursion you must first understand recursion.")
+    Joke.create(category_id: 2, body: "A programmer is heading out to the grocery store, so his wife tells him \"get a gallon of milk, and if they have eggs, get a dozen.\" He returns with 13 gallons of milk.")
+    Joke.create(category_id: 2, body: "Why do programmers give you a gift on Halloween? Because OCT 30 == DEC 25")
