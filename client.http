@@ -4,6 +4,7 @@ GET http://localhost:3000/api/jokes
 ### Successfully posts a joke
 POST http://localhost:3000/api/jokes
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjQ1MjQyMzgsInN1YiI6NH0.tpOLKM7W4aLAwak0A3HW6vSovPU92wPmQTzGMqx-bjk
 
 {
     "category_id": 1,
@@ -16,14 +17,42 @@ GET http://localhost:3000/api/jokes/1
 ### Successfully update joke 1
 PUT http://localhost:3000/api/jokes/1
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjQ1MjQyMzgsInN1YiI6NH0.tpOLKM7W4aLAwak0A3HW6vSovPU92wPmQTzGMqx-bjk
 
 {
     "body": "A programming joke",
-    "category_id": 2,
+    "category_id": 2
 }
+
+### Successfully delete joke I have persmisson for
+DELETE http://localhost:3000/api/jokes/1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjQ1MjQyMzgsInN1YiI6NH0.tpOLKM7W4aLAwak0A3HW6vSovPU92wPmQTzGMqx-bjk
+
 
 ### Successfully delete joke with id 1
 DELETE http://localhost:3000/api/jokes/1
 
 ### Random Joke
 GET http://localhost:3000/api/jokes/random?category=puns
+
+### Create user
+POST http://localhost:3000/api/auth/sign_up
+Content-Type: application/json
+
+{
+    "username": "Nathan3",
+    "email": "nathan3@test.com",
+    "password": "password3",
+    "password_confirmation": "password3"
+}
+
+### Sign in with correct details
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+
+    "email": "nathan3@test.com",
+    "password": "password3"
+}
